@@ -135,7 +135,7 @@ const ALERT_DEFAULT_COLUMN_IDS = ALERT_COLUMN_OPTIONS.map((option) => option.id)
  * 关联关系：通过 apiClient 调用后端接口，并驱动页面组件状态更新。
  */
 const ALERT_REQUIRED_COLUMN_IDS = new Set(
-  ALERT_COLUMN_OPTIONS.filter((option) => option.required).map((option) => option.id),
+  ALERT_COLUMN_OPTIONS.filter((option) => 'required' in option && option.required).map((option) => option.id),
 );
 
 /**
@@ -567,11 +567,11 @@ export function AlertsPage() {
                   <DropdownMenuCheckboxItem
                     key={column.id}
                     checked={visibleColumnSet.has(column.id)}
-                    disabled={Boolean(column.required)}
+                    disabled={Boolean('required' in column && column.required)}
                     onCheckedChange={(checked) => handleToggleColumn(column.id, checked === true)}
                   >
                     {column.label}
-                    {column.required ? "（必选）" : ""}
+                    {'required' in column && column.required ? "（必选）" : ""}
                   </DropdownMenuCheckboxItem>
                 ))}
               </DropdownMenuContent>

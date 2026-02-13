@@ -198,7 +198,7 @@ const DEFAULT_COLUMN_IDS = MONITOR_COLUMN_OPTIONS.map((option) => option.id);
  * 关联关系：通过 apiClient 调用后端接口，并驱动页面组件状态更新。
  */
 const REQUIRED_COLUMN_IDS = new Set(
-  MONITOR_COLUMN_OPTIONS.filter((option) => option.required).map((option) => option.id),
+  MONITOR_COLUMN_OPTIONS.filter((option) => 'required' in option && option.required).map((option) => option.id),
 );
 /**
  * 符号：PAGE_SIZE_OPTIONS（const）
@@ -1007,11 +1007,11 @@ export function ApiMonitorPage() {
                   <DropdownMenuCheckboxItem
                     key={column.id}
                     checked={visibleColumnSet.has(column.id)}
-                    disabled={Boolean(column.required)}
+                    disabled={Boolean('required' in column && column.required)}
                     onCheckedChange={(checked) => handleToggleColumn(column.id, checked === true)}
                   >
                     {column.label}
-                    {column.required ? "（必选）" : ""}
+                    {'required' in column && column.required ? "（必选）" : ""}
                   </DropdownMenuCheckboxItem>
                 ))}
               </DropdownMenuContent>
