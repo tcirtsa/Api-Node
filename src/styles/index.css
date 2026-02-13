@@ -1,0 +1,55 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+
+@keyframes page-fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes orb-drift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(14px, -10px, 0) scale(1.04);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+.page-fade-in {
+  animation: page-fade-in-up 280ms ease-out;
+}
+
+.app-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(70px);
+  opacity: 0.22;
+  animation: orb-drift 12s ease-in-out infinite;
+}
+
+.app-orb-a {
+  width: 360px;
+  height: 360px;
+  right: -120px;
+  top: 80px;
+  background: #60a5fa;
+}
+
+.app-orb-b {
+  width: 260px;
+  height: 260px;
+  left: -100px;
+  bottom: 80px;
+  background: #34d399;
+  animation-delay: 2.8s;
+}

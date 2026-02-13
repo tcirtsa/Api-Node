@@ -1,0 +1,6 @@
+"rank","beforeRule","beforeCount","afterRule","afterCount"
+"1","Availability Drop","12","Availability Drop","10"
+"2","High Error Rate","7","High Error Rate","6"
+"3","Search QPS Spike","7","Search QPS Spike","5"
+"4","SLO Burn Rate","6","",""
+"5","P95 Latency Too High","1","",""

@@ -1,0 +1,481 @@
+{
+  "generatedAt": "2026-02-12T12:59:26.324Z",
+  "seed": "graduation-defense-2026",
+  "phase1": {
+    "minutes": 180,
+    "stepSeconds": 30,
+    "ticks": 361,
+    "metricsIngested": 2166,
+    "createdAlerts": 9,
+    "resolvedAlerts": 5
+  },
+  "phase2": {
+    "minutes": 120,
+    "stepSeconds": 30,
+    "ticks": 241,
+    "metricsIngested": 1446,
+    "createdAlerts": 21,
+    "resolvedAlerts": 20
+  },
+  "feedbackSummary": {
+    "totalAlerts": 12,
+    "updatedFeedbackAlerts": 12
+  },
+  "marker": {
+    "id": "marker_68be10d0a321",
+    "name": "e2e-before-tuning",
+    "note": "baseline marker from e2e script",
+    "createdBy": "e2e-script",
+    "createdAt": "2026-02-12T12:59:24.460Z"
+  },
+  "suggestionsCount": 2,
+  "draftsTotal": 2,
+  "appliedDraftIds": [
+    "draft_8aea6b490060",
+    "draft_c44ba2e1c9ef"
+  ],
+  "impactEstimates": [
+    {
+      "generatedAt": "2026-02-12T12:59:24.469Z",
+      "days": 14,
+      "filters": {
+        "service": null,
+        "apiId": null,
+        "ruleId": "rule_search_qps_spike"
+      },
+      "draftId": "draft_8aea6b490060",
+      "ruleId": "rule_search_qps_spike",
+      "ruleName": "Search QPS Spike",
+      "sampleCount": 2,
+      "confidence": "low",
+      "assumptions": {
+        "model": "heuristic_v1",
+        "effectWeights": {
+          "duplicateRate": {
+            "minSamples": 0.25,
+            "windowMinutes": 0.3,
+            "cooldownMinutes": 0.45
+          },
+          "falsePositiveRate": {
+            "minSamples": 0.5,
+            "windowMinutes": 0.35,
+            "cooldownMinutes": 0.15
+          }
+        }
+      },
+      "explanation": {
+        "normalizedDelta": {
+          "minSamples": 0.5,
+          "windowMinutes": 1,
+          "cooldownMinutes": 0
+        },
+        "contributions": {
+          "duplicateRate": {
+            "minSamples": 0,
+            "windowMinutes": 0,
+            "cooldownMinutes": 0
+          },
+          "falsePositiveRate": {
+            "minSamples": -12.5,
+            "windowMinutes": -17.5,
+            "cooldownMinutes": 0
+          }
+        }
+      },
+      "current": {
+        "duplicateRate": 0,
+        "falsePositiveRate": 50,
+        "minSamples": 2,
+        "windowMinutes": 5,
+        "cooldownMinutes": 20
+      },
+      "draft": {
+        "minSamples": 3,
+        "windowMinutes": 10,
+        "cooldownMinutes": 20
+      },
+      "estimated": {
+        "duplicateRate": 0,
+        "falsePositiveRate": 20
+      },
+      "delta": {
+        "duplicateRate": 0,
+        "falsePositiveRate": -30
+      }
+    },
+    {
+      "generatedAt": "2026-02-12T12:59:24.471Z",
+      "days": 14,
+      "filters": {
+        "service": null,
+        "apiId": null,
+        "ruleId": "rule_slo_burn_rate"
+      },
+      "draftId": "draft_c44ba2e1c9ef",
+      "ruleId": "rule_slo_burn_rate",
+      "ruleName": "SLO Burn Rate",
+      "sampleCount": 6,
+      "confidence": "low",
+      "assumptions": {
+        "model": "heuristic_v1",
+        "effectWeights": {
+          "duplicateRate": {
+            "minSamples": 0.25,
+            "windowMinutes": 0.3,
+            "cooldownMinutes": 0.45
+          },
+          "falsePositiveRate": {
+            "minSamples": 0.5,
+            "windowMinutes": 0.35,
+            "cooldownMinutes": 0.15
+          }
+        }
+      },
+      "explanation": {
+        "normalizedDelta": {
+          "minSamples": 0.5,
+          "windowMinutes": 0,
+          "cooldownMinutes": 0
+        },
+        "contributions": {
+          "duplicateRate": {
+            "minSamples": 0,
+            "windowMinutes": 0,
+            "cooldownMinutes": 0
+          },
+          "falsePositiveRate": {
+            "minSamples": -8.33,
+            "windowMinutes": 0,
+            "cooldownMinutes": 0
+          }
+        }
+      },
+      "current": {
+        "duplicateRate": 0,
+        "falsePositiveRate": 33.33,
+        "minSamples": 2,
+        "windowMinutes": 60,
+        "cooldownMinutes": 15
+      },
+      "draft": {
+        "minSamples": 3,
+        "windowMinutes": 60,
+        "cooldownMinutes": 15
+      },
+      "estimated": {
+        "duplicateRate": 0,
+        "falsePositiveRate": 25
+      },
+      "delta": {
+        "duplicateRate": 0,
+        "falsePositiveRate": -8.33
+      }
+    }
+  ],
+  "reports": {
+    "quality": {
+      "generatedAt": "2026-02-12T12:59:26.319Z",
+      "windowDays": 30,
+      "filters": {
+        "service": null,
+        "apiId": null,
+        "ruleId": null
+      },
+      "totals": {
+        "alerts": 33,
+        "resolvedAlerts": 26,
+        "activeAlerts": 7,
+        "notifications": 0,
+        "sentNotifications": 0,
+        "failedNotifications": 0,
+        "recoveryNotifications": 0,
+        "feedbackFalsePositive": 3,
+        "feedbackTruePositive": 3,
+        "feedbackNoise": 3
+      },
+      "quality": {
+        "duplicateBurstCount": 0,
+        "flappingFingerprintCount": 4,
+        "mttrMinutes": -16.4,
+        "notificationFailureRate": 0,
+        "duplicateRate": 0,
+        "falsePositiveRate": 9.09
+      },
+      "topNoisyRules": [
+        {
+          "ruleId": "rule_availability_low",
+          "ruleName": "Availability Drop",
+          "count": 12
+        },
+        {
+          "ruleId": "rule_error_rate_high",
+          "ruleName": "High Error Rate",
+          "count": 7
+        },
+        {
+          "ruleId": "rule_search_qps_spike",
+          "ruleName": "Search QPS Spike",
+          "count": 7
+        },
+        {
+          "ruleId": "rule_slo_burn_rate",
+          "ruleName": "SLO Burn Rate",
+          "count": 6
+        },
+        {
+          "ruleId": "rule_latency_p95_high",
+          "ruleName": "P95 Latency Too High",
+          "count": 1
+        }
+      ]
+    },
+    "compare": {
+      "generatedAt": "2026-02-12T12:59:26.321Z",
+      "days": 14,
+      "filters": {
+        "service": null,
+        "apiId": null,
+        "ruleId": null
+      },
+      "current": {
+        "generatedAt": "2026-02-12T12:59:26.321Z",
+        "windowDays": 14,
+        "filters": {
+          "service": null,
+          "apiId": null,
+          "ruleId": null
+        },
+        "totals": {
+          "alerts": 33,
+          "resolvedAlerts": 26,
+          "activeAlerts": 7,
+          "notifications": 0,
+          "sentNotifications": 0,
+          "failedNotifications": 0,
+          "recoveryNotifications": 0,
+          "feedbackFalsePositive": 3,
+          "feedbackTruePositive": 3,
+          "feedbackNoise": 3
+        },
+        "quality": {
+          "duplicateBurstCount": 0,
+          "flappingFingerprintCount": 4,
+          "mttrMinutes": -16.4,
+          "notificationFailureRate": 0,
+          "duplicateRate": 0,
+          "falsePositiveRate": 9.09
+        },
+        "topNoisyRules": [
+          {
+            "ruleId": "rule_availability_low",
+            "ruleName": "Availability Drop",
+            "count": 12
+          },
+          {
+            "ruleId": "rule_error_rate_high",
+            "ruleName": "High Error Rate",
+            "count": 7
+          },
+          {
+            "ruleId": "rule_search_qps_spike",
+            "ruleName": "Search QPS Spike",
+            "count": 7
+          },
+          {
+            "ruleId": "rule_slo_burn_rate",
+            "ruleName": "SLO Burn Rate",
+            "count": 6
+          },
+          {
+            "ruleId": "rule_latency_p95_high",
+            "ruleName": "P95 Latency Too High",
+            "count": 1
+          }
+        ]
+      },
+      "previous": {
+        "generatedAt": "2026-02-12T12:59:26.321Z",
+        "windowDays": 14,
+        "filters": {
+          "service": null,
+          "apiId": null,
+          "ruleId": null
+        },
+        "totals": {
+          "alerts": 33,
+          "resolvedAlerts": 26,
+          "activeAlerts": 7,
+          "notifications": 0,
+          "sentNotifications": 0,
+          "failedNotifications": 0,
+          "recoveryNotifications": 0,
+          "feedbackFalsePositive": 3,
+          "feedbackTruePositive": 3,
+          "feedbackNoise": 3
+        },
+        "quality": {
+          "duplicateBurstCount": 0,
+          "flappingFingerprintCount": 4,
+          "mttrMinutes": -16.4,
+          "notificationFailureRate": 0,
+          "duplicateRate": 0,
+          "falsePositiveRate": 9.09
+        },
+        "topNoisyRules": [
+          {
+            "ruleId": "rule_availability_low",
+            "ruleName": "Availability Drop",
+            "count": 12
+          },
+          {
+            "ruleId": "rule_error_rate_high",
+            "ruleName": "High Error Rate",
+            "count": 7
+          },
+          {
+            "ruleId": "rule_search_qps_spike",
+            "ruleName": "Search QPS Spike",
+            "count": 7
+          },
+          {
+            "ruleId": "rule_slo_burn_rate",
+            "ruleName": "SLO Burn Rate",
+            "count": 6
+          },
+          {
+            "ruleId": "rule_latency_p95_high",
+            "ruleName": "P95 Latency Too High",
+            "count": 1
+          }
+        ]
+      },
+      "delta": {
+        "alerts": 0,
+        "duplicateRate": 0,
+        "falsePositiveRate": 0,
+        "notificationFailureRate": 0,
+        "mttrMinutes": 0
+      }
+    },
+    "conclusion": "在最近 14 天窗口内，相比上一同等窗口：告警数量下降或持平；重复率改善；误报率改善；通知稳定性提升；恢复效率提升。当前窗口告警 33 条，误报率 9.09%，重复率 0%，通知失败率 0% 。",
+    "markerCompare": {
+      "generatedAt": "2026-02-12T12:59:26.324Z",
+      "marker": {
+        "id": "marker_68be10d0a321",
+        "name": "e2e-before-tuning",
+        "note": "baseline marker from e2e script",
+        "createdBy": "e2e-script",
+        "createdAt": "2026-02-12T12:59:24.460Z"
+      },
+      "before": {
+        "generatedAt": "2026-02-12T12:59:26.323Z",
+        "windowDays": 14,
+        "filters": {
+          "service": null,
+          "apiId": null,
+          "ruleId": null
+        },
+        "totals": {
+          "alerts": 33,
+          "resolvedAlerts": 26,
+          "activeAlerts": 7,
+          "notifications": 0,
+          "sentNotifications": 0,
+          "failedNotifications": 0,
+          "recoveryNotifications": 0,
+          "feedbackFalsePositive": 3,
+          "feedbackTruePositive": 3,
+          "feedbackNoise": 3
+        },
+        "quality": {
+          "duplicateBurstCount": 0,
+          "flappingFingerprintCount": 4,
+          "mttrMinutes": -16.4,
+          "notificationFailureRate": 0,
+          "duplicateRate": 0,
+          "falsePositiveRate": 9.09
+        },
+        "topNoisyRules": [
+          {
+            "ruleId": "rule_availability_low",
+            "ruleName": "Availability Drop",
+            "count": 12
+          },
+          {
+            "ruleId": "rule_error_rate_high",
+            "ruleName": "High Error Rate",
+            "count": 7
+          },
+          {
+            "ruleId": "rule_search_qps_spike",
+            "ruleName": "Search QPS Spike",
+            "count": 7
+          },
+          {
+            "ruleId": "rule_slo_burn_rate",
+            "ruleName": "SLO Burn Rate",
+            "count": 6
+          },
+          {
+            "ruleId": "rule_latency_p95_high",
+            "ruleName": "P95 Latency Too High",
+            "count": 1
+          }
+        ]
+      },
+      "after": {
+        "generatedAt": "2026-02-12T12:59:26.324Z",
+        "windowDays": 14,
+        "filters": {
+          "service": null,
+          "apiId": null,
+          "ruleId": null
+        },
+        "totals": {
+          "alerts": 21,
+          "resolvedAlerts": 20,
+          "activeAlerts": 1,
+          "notifications": 0,
+          "sentNotifications": 0,
+          "failedNotifications": 0,
+          "recoveryNotifications": 0,
+          "feedbackFalsePositive": 0,
+          "feedbackTruePositive": 0,
+          "feedbackNoise": 0
+        },
+        "quality": {
+          "duplicateBurstCount": 0,
+          "flappingFingerprintCount": 3,
+          "mttrMinutes": 5.3,
+          "notificationFailureRate": 0,
+          "duplicateRate": 0,
+          "falsePositiveRate": 0
+        },
+        "topNoisyRules": [
+          {
+            "ruleId": "rule_availability_low",
+            "ruleName": "Availability Drop",
+            "count": 10
+          },
+          {
+            "ruleId": "rule_error_rate_high",
+            "ruleName": "High Error Rate",
+            "count": 6
+          },
+          {
+            "ruleId": "rule_search_qps_spike",
+            "ruleName": "Search QPS Spike",
+            "count": 5
+          }
+        ]
+      },
+      "delta": {
+        "alerts": -12,
+        "duplicateRate": 0,
+        "falsePositiveRate": -9.09,
+        "notificationFailureRate": 0,
+        "mttrMinutes": 21.7
+      }
+    }
+  }
+}

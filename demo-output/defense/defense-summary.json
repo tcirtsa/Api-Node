@@ -1,0 +1,74 @@
+{
+  "generatedAt": "2026-02-12T12:59:26.324Z",
+  "seed": "graduation-defense-2026",
+  "phase1": {
+    "minutes": 180,
+    "stepSeconds": 30,
+    "ticks": 361,
+    "metricsIngested": 2166,
+    "createdAlerts": 9,
+    "resolvedAlerts": 5
+  },
+  "phase2": {
+    "minutes": 120,
+    "stepSeconds": 30,
+    "ticks": 241,
+    "metricsIngested": 1446,
+    "createdAlerts": 21,
+    "resolvedAlerts": 20
+  },
+  "marker": {
+    "id": "marker_68be10d0a321",
+    "name": "e2e-before-tuning",
+    "note": "baseline marker from e2e script",
+    "createdBy": "e2e-script",
+    "createdAt": "2026-02-12T12:59:24.460Z"
+  },
+  "beforeTotals": {
+    "alerts": 33,
+    "resolvedAlerts": 26,
+    "activeAlerts": 7,
+    "notifications": 0,
+    "sentNotifications": 0,
+    "failedNotifications": 0,
+    "recoveryNotifications": 0,
+    "feedbackFalsePositive": 3,
+    "feedbackTruePositive": 3,
+    "feedbackNoise": 3
+  },
+  "beforeQuality": {
+    "duplicateBurstCount": 0,
+    "flappingFingerprintCount": 4,
+    "mttrMinutes": -16.4,
+    "notificationFailureRate": 0,
+    "duplicateRate": 0,
+    "falsePositiveRate": 9.09
+  },
+  "afterTotals": {
+    "alerts": 21,
+    "resolvedAlerts": 20,
+    "activeAlerts": 1,
+    "notifications": 0,
+    "sentNotifications": 0,
+    "failedNotifications": 0,
+    "recoveryNotifications": 0,
+    "feedbackFalsePositive": 0,
+    "feedbackTruePositive": 0,
+    "feedbackNoise": 0
+  },
+  "afterQuality": {
+    "duplicateBurstCount": 0,
+    "flappingFingerprintCount": 3,
+    "mttrMinutes": 5.3,
+    "notificationFailureRate": 0,
+    "duplicateRate": 0,
+    "falsePositiveRate": 0
+  },
+  "delta": {
+    "alerts": -12,
+    "duplicateRate": 0,
+    "falsePositiveRate": -9.09,
+    "notificationFailureRate": 0,
+    "mttrMinutes": 21.7
+  }
+}

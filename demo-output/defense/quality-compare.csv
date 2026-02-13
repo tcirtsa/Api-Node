@@ -1,0 +1,7 @@
+"metric","before","after","delta"
+"alerts","33","21","-12"
+"activeAlerts","7","1","-6"
+"falsePositiveRate","9.09","0","-9.09"
+"duplicateRate","0","0","0"
+"notificationFailureRate","0","0","0"
+"mttrMinutes","-16.4","5.3","21.7"
